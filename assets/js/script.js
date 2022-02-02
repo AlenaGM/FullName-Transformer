@@ -16,6 +16,9 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
 
     console.log(userFirstName);
 
+    //Выводим результат в инпут
+    document.querySelector('#userFirstName').value = userFirstName;
+
     let smallPatronym = names[2].toLowerCase(); //викторовна
     let begPatronym = smallPatronym[0].toUpperCase();//В
     let endPatronym = smallPatronym.slice(1);//икторовна
@@ -23,17 +26,35 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
 
     console.log(userPatronym);
 
+    //Выводим результат в инпуты
+    document.querySelector('#userPatronym').value = userPatronym;
+
     let smallLastName = names[0].toLowerCase(); //петрова
     let begLastName = smallLastName[0].toUpperCase();//П
     let endLastName = smallLastName.slice(1);//етрова
-    let userLastName = begLastName+endLastName;//Петрова
+    let lastName = begLastName+endLastName;//Петрова
 
-    console.log(userLastName);
+    let doubleLastName = lastName.split("-");//На случай двойной фамилии
 
-    //Выводим результат в инпуты
-    document.querySelector('#userFirstName').value = userFirstName;
-    document.querySelector('#userPatronym').value = userPatronym;
-    document.querySelector('#userLastName').value = userLastName;
+            if (doubleLastName.length !=2){//Стандартная ситуация: одинарная фамилия
+                let userLastName= lastName;
+                console.log(userLastName);
+
+                //Выводим результат в инпут
+                document.querySelector('#userLastName').value = userLastName;//Петрова
+
+            } else {//Нестандартная ситуация: двойная фамилия через дефис
+                let secondLastName = doubleLastName[1];//водкина
+                let begSecondLastName = secondLastName[0].toUpperCase();//В
+                let endSecondLastName = doubleLastName[1].slice(1);//одкина
+                let userSecondLastName = begSecondLastName+endSecondLastName//Водкина
+
+                userLastName = doubleLastName[0] + "-" + userSecondLastName;
+                console.log(userLastName);
+
+                //Выводим результат в инпут
+                document.querySelector('#userLastName').value = userLastName;//Петрова-Водкина
+            }
 
     } else {//Нестандартная ситуация: есть только 1 фамилия и 1 имя, отчества нет
 
@@ -45,21 +66,40 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
 
         console.log(userFirstName);
 
-        let smallLastName = names[0].toLowerCase(); //петрова
-        let begLastName = smallLastName[0].toUpperCase();//П
-        let endLastName = smallLastName.slice(1);//етрова
-        let userLastName = begLastName+endLastName;//Петрова
-
-        console.log(userLastName);
-
         //Выводим результат в инпуты
         document.querySelector('#userFirstName').value = userFirstName;
         document.querySelector('#userPatronym').value = "";
-        document.querySelector('#userLastName').value = userLastName;
+
+        let smallLastName = names[0].toLowerCase(); //петрова
+        let begLastName = smallLastName[0].toUpperCase();//П
+        let endLastName = smallLastName.slice(1);//етрова
+        let lastName = begLastName+endLastName;//Петрова
+
+        let doubleLastName = lastName.split("-");//На случай двойной фамилии
+
+            if (doubleLastName.length !=2){//Стандартная ситуация: одинарная фамилия
+                let userLastName= lastName;
+                console.log(userLastName);
+
+                //Выводим результат в инпут
+                document.querySelector('#userLastName').value = userLastName;//Петрова
+
+            } else {//Нестандартная ситуация: двойная фамилия через дефис
+                let secondLastName = doubleLastName[1];//водкина
+                let begSecondLastName = secondLastName[0].toUpperCase();//В
+                let endSecondLastName = doubleLastName[1].slice(1);//одкина
+                let userSecondLastName = begSecondLastName+endSecondLastName//Водкина
+
+                userLastName = doubleLastName[0] + "-" + userSecondLastName;
+                console.log(userLastName);
+
+                //Выводим результат в инпут
+                document.querySelector('#userLastName').value = userLastName;//Петрова-Водкина
+            }
     }
 
 
 
 
 
-//Проблемы для решения: Много имен; Двойное имя или фамилия через дефис;*/
+//Проблемы для решения: Много имен; Двойное имя через дефис;*/
