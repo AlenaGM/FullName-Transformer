@@ -1,0 +1,4 @@
+type="email" id="userEmail" name="email" class="form__input _email" placeholder="E-mail" tabindex="1" onkeyup="addFilledEmail()"/
+ <label for="userEmail" class="form__label">E-mail*</label>
+
+ <input type="text" id="userFirstName" name="firstName" class="form__input" value="" placeholder="First Name" tabindex="3" onkeyup="addFilledFirstName()"/>
