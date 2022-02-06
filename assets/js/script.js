@@ -97,5 +97,12 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
         console.log(userFirstName.value);//Просто проверить сохраняются ли исправленные значения
         console.log(userPatronym.value);
         console.log(userLastName.value);
+
+        document.querySelector('#userFirstName').value = ''; //Очищаем форму после отправки
+        document.querySelector('#userPatronym').value = '';
+        document.querySelector('#userLastName').value = '';
+
+        document.getElementById('successMessage').innerHTML = 'Спасибо. Ваши данные отправлены.';
+
     });
 
