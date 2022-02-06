@@ -102,12 +102,12 @@ p {
     box-shadow: 0 2px 0 #23262f3b;
 }
 
-.button_color-red {
+.button_color-lilac {
     background-color: #8E6D82 ;
     margin-left: 15px;
 }
 
-.button_color-red:hover {
+.button_color-lilac:hover {
     background-color: #D5A4C1;
 }
 
