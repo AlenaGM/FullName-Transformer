@@ -1,11 +1,4 @@
-type="email" id="userEmail" name="email" class="form__input _email" placeholder="E-mail" tabindex="1" onkeyup="addFilledEmail()"/
- <label for="userEmail" class="form__label">E-mail*</label>
-
- <input type="text" id="userFirstName" name="firstName" class="form__input" value="" placeholder="First Name" tabindex="3" onkeyup="addFilledFirstName()"/>
-
-Доделать: 
-Посмотреть где лет, где конст
-Убрать пробелы в середине
-Что получается, если имен не 2, а 3
-Кнопка проверить и одобрить и резет (проверить, чтобы значения записывались)
-
+#425B5F зеленый
+#8E6D82 темно-розовый
+#D5A4C1 светло-розовый
+#3D3E50 синий

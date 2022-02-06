@@ -92,3 +92,10 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
             }
     }
 
+    document.querySelector("#confirm").addEventListener("click", function(event) {
+        event.preventDefault();
+        console.log(userFirstName.value);//Просто проверить сохраняются ли исправленные значения
+        console.log(userPatronym.value);
+        console.log(userLastName.value);
+    });
+

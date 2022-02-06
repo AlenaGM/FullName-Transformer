@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Сюда шрифты =swap&subset=cyrillic-ext-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap&subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="shortcut icon" href="assets/img/resource.png" type="img/png">
@@ -14,19 +16,25 @@
     <div class="wrapper">
         <header class="header"></header>
         <main class="main">
-            <form>
-                <div>
-                    <label for="userFirstName" class="form__label">Имя</label>
+            <form class="form">
+                <h1 class="form__title">Имя - Отчество - Фамилия</h1>
+                <div class="form__item">
                     <input type="text" id="userFirstName" name="firstName" class="form__input" value=""/>
+                    <label for="userFirstName" class="form__label">Имя</label>
                 </div>
-                <div>
-                    <label for="userPatronym" class="form__label">Отчество</label>
+                <div class="form__item">
                     <input type="text" id="userPatronym" name="patronym" class="form__input" value=""/>
+                    <label for="userPatronym" class="form__label">Отчество</label>
+                </div>
+                <div class="form__item">
+                    <input type="text" id="userLastName" name="lastName" class="form__input" value=""/>
+                    <label for="userLastName" class="form__label">Фамилия</label>
                 </div>
                 <div>
-                    <label for="userLastName" class="form__label">Фамилия</label>
-                    <input type="text" id="userLastName" name="lastName" class="form__input" value=""/>
+                    <p>Подтвердите правильность написания имени, отчества и фамилии.<br> При необходимости вы можете внести исправления перед отправкой. </p>
+                    <button type="submit" id="confirm" class="button button_color-red ">Все верно</button>
                 </div>
+            </form>
         </main>
         <div class="footer"></div>
     </div>
