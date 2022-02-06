@@ -10,9 +10,7 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
 
     //Запихиваем в переменную и приводим в божеский вид
     let smallFirstName = names[1].toLowerCase(); //мария
-    let begFirstName = smallFirstName[0].toUpperCase();//М
-    let endFirstName = smallFirstName.slice(1);//ария
-    let userFirstName = begFirstName+endFirstName;//Мария
+    let userFirstName = smallFirstName[0].toUpperCase()+smallFirstName.slice(1);//Мария
 
     console.log(userFirstName);
 
@@ -20,9 +18,7 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
     document.querySelector('#userFirstName').value = userFirstName;
 
     let smallPatronym = names[2].toLowerCase(); //викторовна
-    let begPatronym = smallPatronym[0].toUpperCase();//В
-    let endPatronym = smallPatronym.slice(1);//икторовна
-    let userPatronym = begPatronym+endPatronym;//Викторовна
+    let userPatronym = smallPatronym[0].toUpperCase()+smallPatronym.slice(1);//Викторовна
 
     console.log(userPatronym);
 
@@ -30,9 +26,7 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
     document.querySelector('#userPatronym').value = userPatronym;
 
     let smallLastName = names[0].toLowerCase(); //петрова
-    let begLastName = smallLastName[0].toUpperCase();//П
-    let endLastName = smallLastName.slice(1);//етрова
-    let lastName = begLastName+endLastName;//Петрова
+    let lastName = smallLastName[0].toUpperCase()+smallLastName.slice(1);//Петрова
 
     let doubleLastName = lastName.split("-");//На случай двойной фамилии
 
@@ -45,9 +39,7 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
 
             } else {//Нестандартная ситуация: двойная фамилия через дефис
                 let secondLastName = doubleLastName[1];//водкина
-                let begSecondLastName = secondLastName[0].toUpperCase();//В
-                let endSecondLastName = doubleLastName[1].slice(1);//одкина
-                let userSecondLastName = begSecondLastName+endSecondLastName//Водкина
+                let userSecondLastName = secondLastName[0].toUpperCase()+doubleLastName[1].slice(1);//Водкина
 
                 userLastName = doubleLastName[0] + "-" + userSecondLastName;
                 console.log(userLastName);
@@ -60,9 +52,7 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
 
         //Запихиваем в переменную и приводим в божеский вид
         let smallFirstName = names[1].toLowerCase(); //мария
-        let begFirstName = smallFirstName[0].toUpperCase();//М
-        let endFirstName = smallFirstName.slice(1);//ария
-        let userFirstName = begFirstName+endFirstName;//Мария
+        let userFirstName = smallFirstName[0].toUpperCase()+smallFirstName.slice(1);//Мария
 
         console.log(userFirstName);
 
@@ -71,9 +61,7 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
         document.querySelector('#userPatronym').value = "";
 
         let smallLastName = names[0].toLowerCase(); //петрова
-        let begLastName = smallLastName[0].toUpperCase();//П
-        let endLastName = smallLastName.slice(1);//етрова
-        let lastName = begLastName+endLastName;//Петрова
+        let lastName = smallLastName[0].toUpperCase()+smallLastName.slice(1);//Петрова
 
         let doubleLastName = lastName.split("-");//На случай двойной фамилии
 
@@ -86,9 +74,7 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
 
             } else {//Нестандартная ситуация: двойная фамилия через дефис
                 let secondLastName = doubleLastName[1];//водкина
-                let begSecondLastName = secondLastName[0].toUpperCase();//В
-                let endSecondLastName = doubleLastName[1].slice(1);//одкина
-                let userSecondLastName = begSecondLastName+endSecondLastName//Водкина
+                let userSecondLastName = secondLastName[0].toUpperCase()+doubleLastName[1].slice(1);//Водкина
 
                 userLastName = doubleLastName[0] + "-" + userSecondLastName;
                 console.log(userLastName);
@@ -98,8 +84,3 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
             }
     }
 
-
-
-
-
-//Проблемы для решения: Много имен; Двойное имя через дефис;*/
