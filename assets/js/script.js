@@ -1,10 +1,18 @@
 //Запрашиваем инфо и обрезаем пробелы в начале и конце
-let fullName = prompt(`Введите ФИО`).trim();
+const fullName = prompt(`Введите ФИО`).trim();
 console.log(fullName);
 
 //Делим на части
-let names = fullName.split(" ");
+let namesSpaces = fullName.split(" ");
+console.log(namesSpaces);
+
+function deleteSpaces(value) {//Удаляем пустые элементы = пробелы внутри ФИО
+    return value != '';
+};
+
+let names = namesSpaces.filter(deleteSpaces);
 console.log(names);
+
 
 if (names.length>2){//Стандартная ситуация: есть 1 фамилия, 1 имя и 1 отчество
 
