@@ -31,7 +31,7 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
     const doubleLastName = lastName.split("-");//На случай двойной фамилии
 
             if (doubleLastName.length !=2){//Стандартная ситуация: одинарная фамилия
-                const userLastName= lastName;
+                let userLastName= lastName;
 
                 //Выводим результат в инпут
                 document.querySelector('#userLastName').value = userLastName;//Петрова
@@ -62,7 +62,7 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
         const doubleLastName = lastName.split("-");//На случай двойной фамилии
 
             if (doubleLastName.length !=2){//Стандартная ситуация: одинарная фамилия
-                const userLastName= lastName;
+                let userLastName= lastName;
 
                 //Выводим результат в инпут
                 document.querySelector('#userLastName').value = userLastName;//Петрова
@@ -81,6 +81,8 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
     document.querySelector("#confirm").addEventListener("click", function(event) {
         event.preventDefault();
 
+        console.log(userFirstName.value, userPatronym.value, userLastName.value);//Просто проверить сохраняются ли исправленные значения
+
         document.querySelector('#userFirstName').value = ''; //Очищаем форму после отправки
         document.querySelector('#userPatronym').value = '';
         document.querySelector('#userLastName').value = '';
@@ -88,4 +90,3 @@ if (names.length>2){//Стандартная ситуация: есть 1 фам
         document.getElementById('successMessage').innerHTML = 'Спасибо. Ваши данные отправлены.';
 
     });
-
